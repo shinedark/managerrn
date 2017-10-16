@@ -1,5 +1,8 @@
 {
   "expo": {
+  	"name": "The Manager",
+  	"slug": "The_Manager",
+  	"icon": "./src/images/Manager.png",
     "sdkVersion": "21.0.0"
   }
 }
