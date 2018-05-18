@@ -1,8 +1,19 @@
 {
   "expo": {
-  	"name": "The Manager",
-  	"slug": "The_Manager",
-  	"icon": "./src/images/Manager.png",
-    "sdkVersion": "21.0.0"
+  	"name": "Caddy",
+  	"slug": "Caddy",
+  	"description": "Caddy For dad",
+  	"icon": "./src/images/Caddy.png",
+    "sdkVersion": "21.0.0",
+    "loading": {
+          "hideExponentText": true
+        },
+        "splash": {
+          "image": "./src/images/splash.png",
+          "resizeMode": "cover"
+        },
+    "ios": {
+          "supportsTablet": false
+        }
   }
 }

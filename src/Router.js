@@ -20,13 +20,13 @@ const RouterComponent = () => {
 					onRight={() => Actions.employeeCreate()}
 					key="employeeList" 
 					component={EmployeeList} 
-					title="Employees"
+					title="Caddy"
 					initial 
 				>
 				</Scene>
-				<Scene key="employeeCreate" component={EmployeeCreate} title='Create Employee'>
+				<Scene key="employeeCreate" component={EmployeeCreate} title='Add Club'>
 				</Scene>
-				<Scene key="employeeEdit" component={EmployeeEdit} title="Edit Employee" />
+				<Scene key="employeeEdit" component={EmployeeEdit} title="Edit Club" />
 			</Scene>
 		</Router>
 	);

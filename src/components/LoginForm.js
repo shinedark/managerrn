@@ -62,9 +62,6 @@ class Loginform extends Component {
 					{this.renderButton()}
 
 				</CardSection>
-				<CardSection>
-				<Text>Use Test@test.com password: password. And play around</Text>
-				</CardSection>
 			</Card>
 		);
 	}

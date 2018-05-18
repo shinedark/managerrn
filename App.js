@@ -10,14 +10,14 @@ export default class App extends React.Component {
   
   componentWillMount(){
     const config = {
-        apiKey: "AIzaSyAl8Wipi8ErYIczP7NKA-Iiw3Ru3MrJgAQ",
-        authDomain: "manager-8fdf6.firebaseapp.com",
-        databaseURL: "https://manager-8fdf6.firebaseio.com",
-        projectId: "manager-8fdf6",
-        storageBucket: "",
-        messagingSenderId: "1075715641630"
-      };
-      firebase.initializeApp(config);
+      apiKey: "AIzaSyBqjFIs8-mcQBDDqi8YNgHwqwwpeJPl28g",
+      authDomain: "dads-9bec2.firebaseapp.com",
+      databaseURL: "https://dads-9bec2.firebaseio.com",
+      projectId: "dads-9bec2",
+      storageBucket: "dads-9bec2.appspot.com",
+      messagingSenderId: "708249643696"
+    };
+    firebase.initializeApp(config);
   }
 
   render() {

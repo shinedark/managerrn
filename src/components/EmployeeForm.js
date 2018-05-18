@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from  'react-redux';
-import { View , Text , Picker } from 'react-native';
+import { View , Text , ScrollView, TextInput } from 'react-native';
 import { employeeUpdate } from '../actions';
 import { CardSection, Input} from './common';
 
@@ -10,8 +10,8 @@ class EmployeeForm extends Component {
 			<View>
 				<CardSection>
 					<Input 
-						label="Name"
-						placeholder="Cam"
+						label="Club"
+						placeholder="6 iron"
 						value={this.props.name}
 						onChangeText={value => this.props.employeeUpdate({prop: 'name', value})}
 					/>
@@ -19,28 +19,26 @@ class EmployeeForm extends Component {
 
 				<CardSection>
 					<Input
-						label="Phone"
-						placeholder="333-333-3333"
+						label="Distance"
+						placeholder="150 To 160"
 						value={this.props.phone}
 						onChangeText={value => this.props.employeeUpdate({prop: 'phone', value})}
 					/>
 				</CardSection>
 
 				<CardSection style={{ flexDirection:'column'}}>
-					<Text style={styles.prickerTextStyle}>Shift</Text>
-					<Picker
-						// style={{flex:1}}
-						selectedValue={this.props.shift}
-						onValueChange={value => this.props.employeeUpdate({prop: 'shift', value})}
-					>
-						<Picker.Item label="Monday" value="Monday" />
-						<Picker.Item label="Tuesday" value="Tuesday" />
-						<Picker.Item label="Wednesday" value="Wednesday" />
-						<Picker.Item label="Thursday" value="Thursday" />
-						<Picker.Item label="Friday" value="Friday" />
-						<Picker.Item label="Saturday" value="Saturday" />
-						<Picker.Item label="Sunday" value="Sunday" />
-					</Picker>
+					<ScrollView>
+						<TextInput
+							style={{ flexDirection:'column', flex: 1 , height: 90, fontSize: 16}}
+							multiline = {true}
+							numberOfLines = {6}
+							label="Notes"
+							placeholder="Ball closer to the left foot"
+							value={this.props.shift}
+							onChangeText={value => this.props.employeeUpdate({prop: 'shift', value})}
+						/>
+					</ScrollView>
+					
 				</CardSection>
 			</View>
 		);
@@ -48,12 +46,7 @@ class EmployeeForm extends Component {
 	}
 }
 
-const styles = {
-	prickerTextStyle:{
-		fontSize:18,
-		paddingLeft:20
-	}
-};
+
 
 const mapStateToProps = ( state ) => {
 	const { name, phone, shift } = state.employeeForm;
